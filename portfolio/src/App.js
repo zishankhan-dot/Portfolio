@@ -1,23 +1,25 @@
 import React from "react";
 import "./App.css";
-import footer from "./components/footer";
-import header from "./components/header";
-import experience from "./components/experience";
-import projects from "./components/projects";
-import education from "./components/education";
-import skills from "./components/skills";
+import Footer from "./components/Footer.js";
+import Header from "./components/Header.js";
+import Experience from "./components/Experience.js";
+import Projects from "./components/Projects.js";
+import Education from "./components/Education.js";
+import Skills from "./components/Skills.js";
 
 function App() {
   return (
     <div className="App">
-      <header />
-      <experience />
-      <projects />
-      <education />   
-      <skills />
-      <footer />
+      <Header />
+      <Education/>
+      <Projects/>
+      <Experience/>
+      <Skills/>
+      <Footer/>
+
     </div>
   );
 }
+
 
 export default App;
