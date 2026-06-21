@@ -59,9 +59,7 @@ export const experience =[
         "Ingested council transcripts and public data for grounded answers.",
         "Focused on factual consistency and reduced hallucination risk."
       ],
-      github: "#",
-      architecture: "#",
-      youtube: "#"
+     
     },
     {
       title: "Concurrent Processing & Benchmarking System",
