@@ -36,7 +36,7 @@ export default function Projects() {
                 <h3 className="card-title">{project.title}</h3>
                 <p className="card-desc">{project.description}</p>
                 <a
-                  href={project.github !== "#" ? project.github : project.architecture}
+                  href={project.github !== "#" ? project.github : null}
                   target="_blank"
                   rel="noreferrer"
                   className="card-explore"
