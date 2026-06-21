@@ -1,25 +1,29 @@
 import React from "react";
 import { experience } from "../data/portfolio_data.js";
 
-export default function Experience(){
+export default function Experience() {
   return (
-    <section className="section container" id="experience">
-      <p className="eyebrow">Experience</p>
-      <h2>Professional Experience</h2>
-      <div className="grid">
-        {experience.map((item, index) => (
-          <div className="card" key={index}>
-            <h3>{item.role}</h3>
-            <p className="subheading">{item.company}</p>
-            <p className="muted">{item.period}</p>
-            <ul className="bullet-list">
-              {item.points.map((point, i) => (
-                <li key={i}>{point}</li>
-              ))}
-            </ul>
-          </div>
-        ))}
+    <section className="experience-section" id="experience">
+      <div className="experience-inner">
+        <p className="section-eyebrow">Career</p>
+        <h2 className="section-title">Professional Experience</h2>
+
+        <div className="timeline">
+          {experience.map((item, i) => (
+            <div className="timeline-item" key={i}>
+              <div className="timeline-dot" />
+              <p className="timeline-period">{item.period}</p>
+              <h3 className="timeline-role">{item.role}</h3>
+              <p className="timeline-company">{item.company}</p>
+              <ul className="timeline-points">
+                {item.points.map((point, j) => (
+                  <li key={j}>{point}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
-};
+}

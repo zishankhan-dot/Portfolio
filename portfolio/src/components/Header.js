@@ -1,39 +1,44 @@
-import React from "react";  
-import {profile} from "../data/portfolio_data.js";
+import React from "react";
+import { profile } from "../data/portfolio_data.js";
+import ZishanImage from "./ZishanKhan.png";
 
+export default function Header() {
+  return (
+    <section className="hero" id="home">
+      <div className="hero-inner">
+        <div className="hero-copy">
+          <h1 className="hero-heading">
+            <span className="hero-greeting">
+              <span className="hi">Hi!</span> I&apos;m
+            </span>
+            <span className="hero-name">Zishan Khan</span>
+          </h1>
 
-export default  function Header(){
-    return (
-        <header className="hero">
-        <div className="container">
-            <p className="eyebrow">Available for software engineering opportunities</p>
-            <h1>{profile.name}</h1>
-            <h2>{profile.title}</h2>
-            <p className="tagline">{profile.tagline}</p>
-            <p className="summary">{profile.summary}</p>
+          <span className="hero-role">{profile.title}</span>
 
-                <div className="hero-buttons">
-                <a href="#projects" className="btn primary">Projects</a>
-                <a href="#education" className="btn primary">Education</a>
-                <a href="#experience" className="btn primary">Experience</a>
-                <a href="#skills" className="btn primary">Skills</a>
-                <a href={profile.resume} className="btn secondary" target="_blank" rel="noreferrer">
-                    Resume
-                </a>
-                </div>
+          <p className="hero-desc">{profile.tagline}</p>
 
-                <div className="contact-row">
-                <span>{profile.location}</span>
-                <a href={`mailto:${profile.email}`}>{profile.email}</a>
-                <span>{profile.phone}</span>
-                </div>
-
-                <div className="social-row">
-                <a href={profile.github} target="_blank" rel="noreferrer">GitHub</a>
-                <a href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
-                </div>
+          <div className="hero-actions">
+            <a href="#contact" className="btn-primary">
+              Get In Touch &nbsp;›
+            </a>
+            <a
+              href={profile.resume}
+              target="_blank"
+              rel="noreferrer"
+              className="btn-outline"
+            >
+              View Resume
+            </a>
+          </div>
         </div>
-        </header>
 
-    );
-};
+        <div className="hero-photo-wrap">
+          <div className="hero-photo-bg">
+            <img src={ZishanImage} alt="Zishan Khan" className="hero-photo" />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

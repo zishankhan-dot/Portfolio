@@ -1,22 +1,26 @@
 import React from "react";
 import { education } from "../data/portfolio_data.js";
 
-export default function Education(){
+export default function Education() {
   return (
-    <section className="section container" id="education">
-      <p className="eyebrow">Education</p>
-      <h2>Academic Foundation</h2>
-      <div className="grid">
-        {education.map((item, index) => (
-          <div className="card" key={index}>
-            <h3>{item.degree}</h3>
-            <p className="subheading">{item.school}</p>
-            <p className="muted">{item.result}</p>
-            <p className="muted">{item.gpa}</p>
-            <p className="muted">{item.period}</p>
-          </div>
-        ))}
+    <section className="education-section" id="education">
+      <div className="education-inner">
+        <p className="section-eyebrow">Academic</p>
+        <h2 className="section-title">Education</h2>
+
+        <div className="education-grid">
+          {education.map((item, i) => (
+            <div className="education-card" key={i}>
+              <p className="edu-period">{item.period}</p>
+              <h3 className="edu-degree">{item.degree}</h3>
+              <p className="edu-school">{item.school}</p>
+              <span className="edu-result">
+                {item.result} &nbsp;·&nbsp; {item.gpa}
+              </span>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
-};
+}
